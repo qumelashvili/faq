@@ -1,57 +1,53 @@
+/* GLOBAL STYLES */
 *{
     margin: 0px;
     font-family: 'Kumbh Sans', sans-serif;
-
 }
 body{
     background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
     margin: 0px;
 }
-
+/* LOCAL STYLES */
 main{
     width: 327px;
+    height: 550px;
     margin: 148px auto;
     background-color: #FFFFFF;
     box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
     border-radius: 23px;
-    /* display: flex; */
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0px 25px 48px 25px;
+    padding: 0px 25px 0px 25px;
     box-sizing: border-box;
 }
-.faq-icon{
+.main-icons{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
 }
-main .woman-icon{
+.woman-icon{
     width: 230px;
     position: absolute;
     top: 45px;
 }
-main .shadow-icon{
+.shadow-icon{
+    position: relative;
     width: 230px;
     height: 100px;
-    margin-top: 0px;
-}
-.faq-container{
-    margin-top: 30px;
 }
 .faq-heading{
     text-align: center;
-    margin-top: 28px;
+    margin: 28px 0px 28px 0px;
 }
 .faq-question{
     font-size: 14px;
     font-weight: 500;
+    color: #4B4C5F;
 }
 .faq-answer{
     font-size: 12px;
     display: none;
     margin-top: 13px;
     color: #787887;
-    line-height: 18px;
-
 }
 .faq-area{
     cursor: pointer;
@@ -65,21 +61,65 @@ main .shadow-icon{
     background-color: #E8E8EA;
     margin: 18px 0px;
 }
-
 .faq-question::after{
     content: url(./images/icon-arrow-down.svg);
     float: right;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear; 
 }
-
 .active div{
     display: block;
 }
 .active h1::after{
     transform: rotate(180deg);
-
 }
 .active h1{
     font-weight: 700;
+}
+
+@media screen and (min-width : 1440px) {
+   main{
+    width: 920px;
+    height: 550px;
+    display:flex;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 0px;
+   }
+   .main-icons{
+    width: 40%;
+    margin-left: -70px;
+   }
+   .woman-icon{
+    content: url(./images/illustration-woman-online-desktop.svg);
+    width: auto;
+    position: relative;
+    left: -50px;
+   }
+   .shadow-icon{
+    content: url(./images/bg-pattern-desktop.svg);
+    width: auto;
+    width: 800px;
+    height: 800px;
+    top: -600px;
+    left: -210px;
+   }
+   .main-icons::after{
+    content: url(./images/illustration-box-desktop.svg);
+    position: absolute;
+    top: 358px;
+    left: 173px;
+   }
+   .faq-container{
+    width: 40%;
+    margin-top: 50px;
+   }
+   .faq-heading {
+    text-align: start;
+    font-weight: 700;
+    font-size: 32px;
+   }
 }
 
 

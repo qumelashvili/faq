@@ -27,7 +27,6 @@ const faqContent = [
 ]
 
 let faqSection = document.querySelector(".faq-container");
-console.log(faqSection)
 for(var content of faqContent){
     let inner = 
     `
@@ -46,11 +45,8 @@ for(var content of faqContent){
 
 let faqArea = document.querySelectorAll(".faq-area");
 
-
-
 for(var question of faqArea){
     question.addEventListener("click", function(){
         this.classList.toggle("active")
     })
-   
 }
